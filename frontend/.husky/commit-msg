@@ -1,0 +1,3 @@
+commit_msg_file="$(git rev-parse --path-format=absolute --git-path COMMIT_EDITMSG)" || exit 1
+cd frontend || exit 1
+npx --no -- commitlint --edit "$commit_msg_file"
