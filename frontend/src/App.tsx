@@ -1,7 +1,12 @@
+import { Toaster } from 'sonner';
+import { RouterProvider } from 'react-router-dom';
+import { router } from '@/router';
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <>
+      <Toaster position="top-right" richColors closeButton duration={3000} />
+      <RouterProvider router={router} />
+    </>
+  );
 }
